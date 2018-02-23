@@ -7,7 +7,7 @@ public class BenytBilletautomat {
 
     public static void main(String[] arg) {
         Billetautomat automat = new Billetautomat();
-        java.util.Scanner tastatur = new java.util.Scanner(System.in);  // forbered
+        java.util.Scanner tastatur = new java.util.Scanner(System.in);
 
         System.out.println("BenytBilletautomat version 3");
         System.out.println(); // test 2
