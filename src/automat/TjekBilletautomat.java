@@ -1,5 +1,6 @@
 package automat;
 
+
 public class TjekBilletautomat
 {
 	public static void main(String[] arg)

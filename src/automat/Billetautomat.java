@@ -1,6 +1,6 @@
-// Hej med dig 
 //baseline
 package automat;
+
 
 /**
  * Model af en simpel billetautomat til enkeltbilletter med én fast pris.

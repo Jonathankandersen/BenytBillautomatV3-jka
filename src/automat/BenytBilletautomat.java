@@ -1,4 +1,6 @@
-package automat; //Baseline Hej
+//HEj6466
+
+package automat; //Baseline
 
 import java.util.ArrayList;
 import java.time.LocalDateTime;
@@ -99,7 +101,7 @@ public class BenytBilletautomat {
                 default: {
                     System.out.println("Ugyldigt valg, prøv igen");
                     break;
-
+                    // HEJ
                 }
 
             }
