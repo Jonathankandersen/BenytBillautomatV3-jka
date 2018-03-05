@@ -1,7 +1,6 @@
 //baseline
 package automat;
 
-
 /**
  * Model af en simpel billetautomat til enkeltbilletter med én fast pris.
  */
@@ -33,11 +32,13 @@ public class Billetautomat {
      * Modtag nogle penge (i kroner) fra en kunde.
      */
     public void indsætPenge(int beløb) {
-        if (beløb > 0) {
+        if (beløb > 0 && beløb <= 1000) { //Første Krav Ændring med Boolan Udtryk 
             balance = balance + beløb;
 
         } else if (beløb < 0) { // ændring 
-            System.err.println("Du kan ikke trække fra beløbet");
+            System.err.println("Vis du ønsker penge retur tast '3'");
+        } else if (beløb > 1000) { // Første Krav MAX 1000 KR kan indsættes 
+            System.err.println("Det maximale beløb der kan indsættes er 1000 KR");
         } else {
             System.err.println("Forkert indtastning");
         }
@@ -56,7 +57,7 @@ public class Billetautomat {
     public void udskrivBillet() {
         if (balance <= 9) {
             System.out.println("Du mangler at indbetale nogle penge");
-        } else if (balance >= 10    ) {  
+        } else if (balance >= 10) {
             System.out.println("##########B##T#########");
             System.out.println("# BlueJ Trafikselskab #");
             System.out.println("#                     #");
@@ -65,7 +66,7 @@ public class Billetautomat {
             System.out.println("#                     #");
             System.out.println("##########B##T#########");
             System.out.println("#       Du har        #");
-            System.out.println("#        "+(balance - billetpris)+ " kr         #");
+            System.out.println("#        " + (balance - billetpris) + " kr         #");
             System.out.println("#      til gode       #");
             System.out.println("##########B##T#########");
             System.out.println();
