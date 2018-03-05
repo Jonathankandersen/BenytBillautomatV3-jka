@@ -15,10 +15,14 @@
         <group name="prog1">
             <file>file:/home/j/Drev/02313/02315%20TestOgVersionering/BenytBillautomatV3/src/automat/TjekBilletautomat.java</file>
         </group>
+<<<<<<< HEAD
         <group>
             <file>file:/C:/Users/shuha/OneDrive/Skrivebord/Kurser/2.Semester/Objektorienter%20Programmering/Opgaver/Opgaver%20Uge%204/Billetautomat2/BenytBillautomatV3-jka/src/automat/Billetautomat.java</file>
             <file>file:/C:/Users/shuha/OneDrive/Skrivebord/Kurser/2.Semester/Objektorienter%20Programmering/Opgaver/Opgaver%20Uge%204/Billetautomat2/BenytBillautomatV3-jka/src/automat/TjekBilletautomat.java</file>
             <file>file:/C:/Users/shuha/OneDrive/Skrivebord/Kurser/2.Semester/Objektorienter%20Programmering/Opgaver/Opgaver%20Uge%204/Billetautomat2/BenytBillautomatV3-jka/src/automat/BenytBilletautomat.java</file>
         </group>
+=======
+        <group/>
+>>>>>>> c55f2549e8dd62cf80e1c6b60e95d8299d6f31ac
     </open-files>
 </project-private>

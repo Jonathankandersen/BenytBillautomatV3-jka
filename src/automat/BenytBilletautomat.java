@@ -44,6 +44,7 @@ public class BenytBilletautomat {
                 }
                 case 2: {
                     automat.udskrivBillet();
+                    System.out.println("Det er idag: " +currentTime);
 
                     break;
 
@@ -101,7 +102,7 @@ public class BenytBilletautomat {
                 default: {
                     System.out.println("Ugyldigt valg, prøv igen");
                     break;
-                    // HEJ
+                    
                 }
 
             }
