@@ -1,4 +1,4 @@
-package automat; //Baseline
+package automat; //Baseline Hej
 
 import java.util.ArrayList;
 import java.time.LocalDateTime;
