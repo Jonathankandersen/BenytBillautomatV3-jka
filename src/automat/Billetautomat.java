@@ -34,7 +34,7 @@ public class Billetautomat {
     public void indsætPenge(int beløb) {
         if (beløb > 0 && beløb <= 1000) { //Første Krav Ændring med Boolan Udtryk 
             balance = balance + beløb;
-        } else if (balance>=1000){
+        } else if (balance>1000){
             System.err.println("Max balance er 1000 kroner");
         } else if (beløb < 0) { // ændring 
             System.err.println("Hvis du ønsker penge retur tast '3'");
