@@ -44,6 +44,7 @@ public class BenytBilletautomat {
                 }
                 case 2: {
                     automat.udskrivBillet();
+                    System.out.println("Det er idag: " +currentTime);
 
                     break;
 

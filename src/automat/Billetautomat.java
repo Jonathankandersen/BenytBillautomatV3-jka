@@ -1,5 +1,6 @@
 //baseline
 package automat;
+import java.time.LocalDateTime;
 
 /**
  * Model af en simpel billetautomat til enkeltbilletter med én fast pris.
