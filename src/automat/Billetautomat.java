@@ -81,7 +81,19 @@ public class Billetautomat {
     public int returpenge() {
         int returbeløb = balance;
         balance = 0;
-        System.out.println("Du får " + returbeløb + " kr retur");
+        System.out.println("##########B##T#########");
+            System.out.println("# BlueJ Trafikselskab #");
+            System.out.println("#                     #");
+            System.out.println("#  ## VÆRDI KUPON ##  #");
+            System.out.println("#   KAN UDBETALES I   #");
+            System.out.println("#        BUTIK        #");
+            System.out.println("##########B##T#########");
+            System.out.println("#       Du har        #");
+            System.out.println("#         " + returbeløb+"          #");
+            System.out.println("#    Kroner til gode  #");
+            System.out.println("##########B##T#########");
+            System.out.println();
+     //   System.out.println("Du får " + returbeløb + " kr retur");
         return returbeløb;
     }
 
