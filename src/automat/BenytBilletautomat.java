@@ -101,7 +101,7 @@ public class BenytBilletautomat {
                 default: {
                     System.out.println("Ugyldigt valg, prøv igen");
                     break;
-                    // HEJ
+                    
                 }
 
             }
