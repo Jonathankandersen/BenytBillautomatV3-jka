@@ -1,4 +1,5 @@
 //baseline
+// Hej med dig 
 package automat;
 
 import java.time.LocalDateTime;
