@@ -1,5 +1,4 @@
 //hest
-
 package automat; //Baseline
 
 import java.util.ArrayList;
@@ -44,15 +43,13 @@ public class BenytBilletautomat {
                 }
                 case 2: {
                     automat.udskrivBillet();
-                    System.out.println("Det er idag: " +currentTime);
+                    System.out.println("Det er idag: " + currentTime);
 
                     break;
-
                 }
                 case 3: {
                     int beløb = automat.returpenge();
                     break;
-
                 }
                 case 10: {
                     System.out.print("Skriv kode: ");
@@ -65,34 +62,27 @@ public class BenytBilletautomat {
                     System.out.println("Antal billetter solgt: " + automat.getAntalBilletterSolgt());
                     System.out.println("Total indkomst: " + automat.getTotal() + " kr");
                     break;
-
                 }
-
                 case 12: {
                     automat.nulstil();
                     break;
                 }
-
                 case 13: {
                     System.out.print("Skriv beløb: ");
                     int beløb = tastatur.nextInt();
                     automat.setBilletpris(beløb);
                     break;
-
                 }
-
                 case 14: {
                     automat.montørLogin("");
                     break;
-
                 }
                 case 15: {
                     ArrayList<Integer> liste1;
                     liste1 = new ArrayList<>();
-                    
+
                     ArrayList<Integer> liste2;
                     liste2 = new ArrayList<>();
-                    
 
                     liste1.add(automat.getAntalBilletterSolgt());
                     liste2.add(automat.getTotal());
@@ -102,7 +92,7 @@ public class BenytBilletautomat {
                 default: {
                     System.out.println("Ugyldigt valg, prøv igen");
                     break;
-                    
+
                 }
 
             }

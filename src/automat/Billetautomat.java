@@ -1,5 +1,6 @@
 //baseline
 package automat;
+
 import java.time.LocalDateTime;
 
 /**
@@ -35,7 +36,7 @@ public class Billetautomat {
     public void indsætPenge(int beløb) {
         if (beløb > 0 && beløb <= 1000) { //Første Krav Ændring med Boolan Udtryk 
             balance = balance + beløb;
-        } else if (balance>1000){
+        } else if (balance > 1000) {
             System.err.println("Max balance er 1000 kroner");
         } else if (beløb < 0) { // ændring 
             System.err.println("Hvis du ønsker penge retur tast '3'");
@@ -77,11 +78,22 @@ public class Billetautomat {
             balance = balance - billetpris; // Billetter koster 10 kroner
         }
     }
-
+    // Retunere værdi kupon med penge til gode 
     public int returpenge() {
         int returbeløb = balance;
         balance = 0;
-        System.out.println("Du får " + returbeløb + " kr retur");
+        System.out.println("##########B##T#########");
+        System.out.println("# BlueJ Trafikselskab #");
+        System.out.println("#                     #");
+        System.out.println("#  ## VÆRDI KUPON ##  #");
+        System.out.println("#   KAN UDBETALES I   #");
+        System.out.println("#        BUTIK        #");
+        System.out.println("##########B##T#########");
+        System.out.println("#       Du har        #");
+        System.out.println("#         " + returbeløb + "          #");
+        System.out.println("#    Kroner til gode  #");
+        System.out.println("##########B##T#########");
+        System.out.println();
         return returbeløb;
     }
 
