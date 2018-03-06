@@ -17,6 +17,12 @@
         </group>
 <<<<<<< HEAD
         <group>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/BenytBillautomatV3-jka/BenytBillautomatV3-master/src/automat/BenytBilletautomat.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/BenytBillautomatV3-jka/BenytBillautomatV3-master/src/automat/Billetautomat.java</file>
+        </group>
+=======
+<<<<<<< HEAD
+        <group>
             <file>file:/C:/Users/shuha/OneDrive/Skrivebord/Kurser/2.Semester/Objektorienter%20Programmering/Opgaver/Opgaver%20Uge%204/Billetautomat2/BenytBillautomatV3-jka/src/automat/Billetautomat.java</file>
             <file>file:/C:/Users/shuha/OneDrive/Skrivebord/Kurser/2.Semester/Objektorienter%20Programmering/Opgaver/Opgaver%20Uge%204/Billetautomat2/BenytBillautomatV3-jka/src/automat/TjekBilletautomat.java</file>
             <file>file:/C:/Users/shuha/OneDrive/Skrivebord/Kurser/2.Semester/Objektorienter%20Programmering/Opgaver/Opgaver%20Uge%204/Billetautomat2/BenytBillautomatV3-jka/src/automat/BenytBilletautomat.java</file>
@@ -24,5 +30,6 @@
 =======
         <group/>
 >>>>>>> c55f2549e8dd62cf80e1c6b60e95d8299d6f31ac
+>>>>>>> 05e8a8ae70c8a283e9a83655a733d7b10991cd01
     </open-files>
 </project-private>
