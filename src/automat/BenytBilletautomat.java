@@ -1,5 +1,5 @@
-//hest
-package automat; //Baseline
+
+package automat; //Baseline 
 
 import java.util.ArrayList;
 import java.time.LocalDateTime;
