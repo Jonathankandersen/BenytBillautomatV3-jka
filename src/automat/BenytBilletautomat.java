@@ -12,7 +12,6 @@ public class BenytBilletautomat {
 
         System.out.println("BenytBilletautomat version 3");
         System.out.println(); // test 2
-        LocalDateTime currentTime = LocalDateTime.now();
 
         while (true) {
             System.out.println("-----------------------------------------------");
@@ -43,8 +42,6 @@ public class BenytBilletautomat {
                 }
                 case 2: {
                     automat.udskrivBillet();
-                    System.out.println("Det er idag: " + currentTime);
-
                     break;
                 }
                 case 3: {
@@ -78,8 +75,7 @@ public class BenytBilletautomat {
                     break;
                 }
                 case 15: {
-                    System.out.println("Log: ");
-                    System.out.println("ÅÅ/MM/DD & Time : " + LocalDateTime.now());
+                   
                     automat.getLog();
 
                     break;
