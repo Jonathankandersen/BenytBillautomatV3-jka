@@ -78,15 +78,10 @@ public class BenytBilletautomat {
                     break;
                 }
                 case 15: {
-                    ArrayList<Integer> liste1;
-                    liste1 = new ArrayList<>();
+                    System.out.println("Log: ");
+                    System.out.println("ÅÅ/MM/DD & Time : " + LocalDateTime.now());
+                    automat.getLog();
 
-                    ArrayList<Integer> liste2;
-                    liste2 = new ArrayList<>();
-
-                    liste1.add(automat.getAntalBilletterSolgt());
-                    liste2.add(automat.getTotal());
-                    System.out.println("Log:" + currentTime + " Antal solgte billetter: " + liste1 + " Styk " + " Total omsætning: " + liste2 + " Kroner");
                     break;
                 }
                 default: {

@@ -2,7 +2,6 @@
 // Hej med dig 
 package automat;
 
-
 /**
  * Model af en simpel billetautomat til enkeltbilletter med én fast pris.
  */
@@ -35,10 +34,9 @@ public class Billetautomat {
      */
     public void indsætPenge(int beløb) {
         if (beløb > 0 && beløb <= 1000) { //Første Krav Ændring med Boolan Udtryk 
-            if (balance < 1000){ // Første krav sikre at der ikke kan indsættes mere end 1000 total
-            balance = balance + beløb;
-            }
-            else {
+            if (balance < 1000) { // Første krav sikre at der ikke kan indsættes mere end 1000 total
+                balance = balance + beløb;
+            } else {
                 System.err.println("Der kan max indsættes 1000 kr "); // Første krav vis over 1000 prøves at indsættes 
             }
         } else if (balance > 1000) {
@@ -83,6 +81,7 @@ public class Billetautomat {
             balance = balance - billetpris; // Billetter koster 10 kroner
         }
     }
+
     // Retunere værdi kupon med penge til gode 
     public int returpenge() {
         int returbeløb = balance;
@@ -154,4 +153,10 @@ public class Billetautomat {
     public boolean erMontør() {
         return montørtilstand;
     }
+
+    public void getLog() { // Lavet en ny log metode
+        System.out.println("Antal solgte billetter " + getAntalBilletterSolgt());
+        System.out.println("Total omsætning: " + getTotal());
+    }
+
 }
