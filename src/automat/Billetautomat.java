@@ -2,6 +2,8 @@
 // Hej med dig 
 package automat;
 
+import java.time.LocalDateTime;
+
 /**
  * Model af en simpel billetautomat til enkeltbilletter med én fast pris.
  */
@@ -62,7 +64,7 @@ public class Billetautomat {
      */
     public void udskrivBillet() {
         if (balance <= 9) {
-            System.out.println("Du mangler at indbetale nogle penge");
+            System.err.println("Du mangler at indbetale nogle penge");
         } else if (balance >= 10) {
             System.out.println("##########B##T#########");
             System.out.println("# BlueJ Trafikselskab #");
@@ -76,7 +78,6 @@ public class Billetautomat {
             System.out.println("#      til gode       #");
             System.out.println("##########B##T#########");
             System.out.println();
-
             antalBilletterSolgt = antalBilletterSolgt + 1;
             balance = balance - billetpris; // Billetter koster 10 kroner
         }
@@ -155,6 +156,8 @@ public class Billetautomat {
     }
 
     public void getLog() { // Lavet en ny log metode
+        System.out.println("Log: ");
+        System.out.println("ÅÅ/MM/DD & Time : " + LocalDateTime.now());
         System.out.println("Antal solgte billetter " + getAntalBilletterSolgt());
         System.out.println("Total omsætning: " + getTotal());
     }
