@@ -35,7 +35,12 @@ public class Billetautomat {
      */
     public void indsætPenge(int beløb) {
         if (beløb > 0 && beløb <= 1000) { //Første Krav Ændring med Boolan Udtryk 
+            if (balance < 1000){ // Første krav sikre at der ikke kan indsættes mere end 1000 total
             balance = balance + beløb;
+            }
+            else {
+                System.err.println("Der kan max indsættes 1000 kr "); // Første krav vis over 1000 prøves at indsættes 
+            }
         } else if (balance > 1000) {
             System.err.println("Max balance er 1000 kroner");
         } else if (beløb < 0) { // ændring 
