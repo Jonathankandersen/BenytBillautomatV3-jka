@@ -1,13 +1,12 @@
 
 package automat; //Baseline 
 
-import java.util.ArrayList;
-import java.time.LocalDateTime;
 
 public class BenytBilletautomat {
 
     public static void main(String[] arg) {
         Billetautomat automat = new Billetautomat();
+        Medlem medlem = new Medlem();
         java.util.Scanner tastatur = new java.util.Scanner(System.in);
 
         System.out.println("BenytBilletautomat version 3");
@@ -42,6 +41,7 @@ public class BenytBilletautomat {
                 }
                 case 2: {
                     automat.udskrivBillet();
+                    medlem.sighej();
                     break;
                 }
                 case 3: {

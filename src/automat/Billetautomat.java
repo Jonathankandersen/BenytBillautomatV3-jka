@@ -157,7 +157,7 @@ public class Billetautomat {
 
     public void getLog() { // Lavet en ny log metode
         System.out.println("Log: ");
-        System.out.println("ÅÅ/MM/DD & Time : " + LocalDateTime.now());
+        System.out.println(LocalDateTime.now());
         System.out.println("Antal solgte billetter " + getAntalBilletterSolgt());
         System.out.println("Total omsætning: " + getTotal());
     }
