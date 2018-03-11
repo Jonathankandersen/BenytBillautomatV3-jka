@@ -112,8 +112,7 @@ public class BenytBilletautomat {
                         System.out.println("Log printet til fil");
                     }
                     break;
-                
-             
+
                 }
                 default: {
                     System.out.println("Ugyldigt valg, prøv igen");

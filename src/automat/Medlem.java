@@ -3,23 +3,6 @@ package automat;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-<<<<<<< HEAD
-import java.io.*;
-
-public class Medlem {
-
-Scanner input = new Scanner(System.in);
-
-ArrayList<String> medlemsNavn = new ArrayList<>();
-ArrayList<String> medlemsNummer = new ArrayList<>();
-ArrayList<String> mail = new ArrayList<>();
-ArrayList<String> telefon = new ArrayList<>(); 
-ArrayList<String> kode = new ArrayList<>();
-
-public void tilføjMedlem(String navn, String nummer, String mail, String telefon, String kode) {
-        
-    }
-=======
 
 public class Medlem {
 
@@ -35,15 +18,12 @@ public class Medlem {
      *
      */
     public void tilføjMedlem() {
-       while (true) {
-        System.out.println("Indtast dit fornavn");
-        medlemsNavn.add(input.nextLine());
-        
->>>>>>> 84afae130468f7f9876295e809e4bd963a6af316
-
+        while (true) {
+            System.out.println("Indtast dit fornavn");
+            medlemsNavn.add(input.nextLine());
+        }
     }
-    }
-/*
+    /*
     private boolean medlemTilstand;
 
     void medlemLogin(String adgangskode) {
