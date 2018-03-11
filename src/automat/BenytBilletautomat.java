@@ -1,12 +1,14 @@
-
 package automat; //Baseline 
 
+<<<<<<< HEAD
+=======
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
 
+>>>>>>> 728c0589702812f56580e4780df7c5081d596014
 public class BenytBilletautomat {
 
     public static void main(String[] arg) {
@@ -25,6 +27,7 @@ public class BenytBilletautomat {
             System.out.println("Tast 1 for at indbetale penge");
             System.out.println("Tast 2 for at udskrive din billet");
             System.out.println("Tast 3 for at få returpengene");
+            System.out.println("Tast 4 for medlemskab");
             System.out.println();
             System.out.println("Tast 10 for at logge ind som montør");
             if (automat.erMontør()) {
@@ -47,12 +50,16 @@ public class BenytBilletautomat {
                 }
                 case 2: {
                     automat.udskrivBillet();
-                    medlem.sighej();
                     break;
                 }
                 case 3: {
                     int beløb = automat.returpenge();
                     break;
+                }
+                case 4: {
+                    System.out.println("Tast 1 for at logge ind");
+                    System.out.println("Tast 2 for at oprette medlemskab");
+                    System.out.println("Tast 3 for at redigere medlemskab");
                 }
                 case 10: {
                     System.out.print("Skriv kode: ");
@@ -81,7 +88,7 @@ public class BenytBilletautomat {
                     break;
                 }
                 case 15: {
-                   
+
                     automat.getLog();
 
                     break;
