@@ -18,14 +18,12 @@ public class Medlem {
      *
      */
     public void tilføjMedlem() {
-       while (true) {
-        System.out.println("Indtast dit fornavn");
-        medlemsNavn.add(input.nextLine());
-        
-
+        while (true) {
+            System.out.println("Indtast dit fornavn");
+            medlemsNavn.add(input.nextLine());
+        }
     }
-    }
-/*
+    /*
     private boolean medlemTilstand;
 
     void medlemLogin(String adgangskode) {
