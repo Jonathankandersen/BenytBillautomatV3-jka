@@ -115,6 +115,7 @@ public class BenytBilletautomat {
                 }
                 case 20: {
                     automat.medlemLogin("");
+                    automat.setBilletpris(10);
                     break;
                 }
 

@@ -185,8 +185,8 @@ public class Billetautomat {
     
     public int rabatBillet(){
         if (medlemstilstand){
+            this.billetpris = medlemspris;
             System.out.println("Din billetpris"+ medlemspris);
-            billetpris = medlemspris;
         } else {
             System.out.println("Du betaler normalpris");
         }
@@ -198,7 +198,8 @@ public class Billetautomat {
             medlemstilstand = true;
             System.out.println("Du er logget ind som medlem!");
         } else {
-            montørtilstand = false;
+            medlemstilstand = false;
+            
             System.out.println("Ikke medlem!");
         }
     }
@@ -207,7 +208,7 @@ public class Billetautomat {
 
     {
 
-        Scanner input = new Scanner(System.in);
+        //Scanner input = new Scanner(System.in);
 
         ArrayList<String> medlemsNavn = new ArrayList<>();
         ArrayList<String> medlemsNummer = new ArrayList<>();
