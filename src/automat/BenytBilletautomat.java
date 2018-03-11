@@ -88,7 +88,7 @@ public class BenytBilletautomat {
                 }
                 case 16: {
                 try {
-                    automat.writerString();
+                    automat.writerLog();
                 } catch (IOException ex) {
                     Logger.getLogger(BenytBilletautomat.class.getName()).log(Level.SEVERE, null, ex);
                 }

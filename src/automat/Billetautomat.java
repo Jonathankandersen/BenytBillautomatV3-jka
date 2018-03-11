@@ -165,12 +165,12 @@ public class Billetautomat {
         System.out.println("Total omsætning: " + getTotal());
     }
 
-    public void writerString()
+    public void writerLog()
             throws IOException {
         FileWriter fileWriter = new FileWriter("file.txt");
         PrintWriter printWriter = new PrintWriter(fileWriter);
-        printWriter.println("Antal solgte billetter: " + getAntalBilletterSolgt()+ " Styk");
-        printWriter.println("Total: "+getTotal() +"Kroner");
+        printWriter.println("Antal solgte billetter: " + getAntalBilletterSolgt() + " Styk");
+        printWriter.println("Total: " + getTotal() + "Kroner");
         printWriter.close();
 
     }
