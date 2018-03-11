@@ -1,14 +1,11 @@
 package automat; //Baseline 
 
-<<<<<<< HEAD
-=======
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
 
->>>>>>> 728c0589702812f56580e4780df7c5081d596014
 public class BenytBilletautomat {
 
     public static void main(String[] arg) {
@@ -98,6 +95,7 @@ public class BenytBilletautomat {
                     automat.writerLog();
                 } catch (IOException ex) {
                     Logger.getLogger(BenytBilletautomat.class.getName()).log(Level.SEVERE, null, ex);
+                    System.out.println("Log printet til fil");
                 }
                     break;
                 }
