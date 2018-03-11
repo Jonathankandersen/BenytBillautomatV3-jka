@@ -1,5 +1,14 @@
 package automat; //Baseline 
 
+<<<<<<< HEAD
+=======
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
+
+>>>>>>> 728c0589702812f56580e4780df7c5081d596014
 public class BenytBilletautomat {
 
     public static void main(String[] arg) {
@@ -26,7 +35,8 @@ public class BenytBilletautomat {
                 System.out.println("Tast 12 for at nulstille (montør)");
                 System.out.println("Tast 13 for at sætte billetpris (montør)");
                 System.out.println("Tast 14 for at logge ud af montørtilstand");
-                System.out.println("Tast 15 for at udskrive logs");
+                System.out.println("Tast 15 for at vise logs");
+                System.out.println("Tast 16 for at printe log til fil");
             }
             int valg = tastatur.nextInt();
             tastatur.nextLine();
@@ -81,6 +91,14 @@ public class BenytBilletautomat {
 
                     automat.getLog();
 
+                    break;
+                }
+                case 16: {
+                try {
+                    automat.writerLog();
+                } catch (IOException ex) {
+                    Logger.getLogger(BenytBilletautomat.class.getName()).log(Level.SEVERE, null, ex);
+                }
                     break;
                 }
                 default: {
