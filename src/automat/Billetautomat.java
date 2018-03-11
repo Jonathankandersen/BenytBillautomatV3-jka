@@ -29,6 +29,7 @@ public class Billetautomat {
         medlemspris = 5;
         balance = 0;
         antalBilletterSolgt = 0;
+        int medlemskode = 0;
     }
 
     /**
