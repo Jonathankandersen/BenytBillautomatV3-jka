@@ -17,7 +17,7 @@ public class Billetautomat {
     private int billetpris;    // Prisen for én billet.
     private int balance; // Hvor mange penge kunden p.t. har puttet i automaten
     private int antalBilletterSolgt; // Antal billetter automaten i alt har solgt
-    private int medlemspris;
+    private int medlemspris;        // Prisen for én billet til medlemmer
     private boolean montørtilstand;
     private boolean medlemstilstand;
 
@@ -79,7 +79,7 @@ public class Billetautomat {
      * Udskriv en billet. Opdater total og nedskriv balancen med billetprisen
      */
     public void udskrivBillet() {
-        if (balance <= 9) {
+        if (balance < billetpris) {
             System.err.println("Du mangler at indbetale nogle penge");
         } else if (balance >= 10) {
             System.out.println("##########B##T#########");
@@ -99,7 +99,7 @@ public class Billetautomat {
         }
     }
 
-    // Retunere værdi kupon med penge til gode 
+    // Returnerer værdikupon med penge til gode 
     public int returpenge() {
         int returbeløb = balance;
         balance = 0;
@@ -118,6 +118,7 @@ public class Billetautomat {
         return returbeløb;
     }
 
+    // Login til montøren af billetautomaten
     void montørLogin(String adgangskode) {
         if ("1234".equals(adgangskode)) {
             montørtilstand = true;
@@ -151,6 +152,7 @@ public class Billetautomat {
         this.billetpris = billetpris;
     }
 
+    // Montøren nulstiller billetautomaten
     public void nulstil() {
         if (montørtilstand) {
             antalBilletterSolgt = 0;
@@ -192,14 +194,13 @@ public class Billetautomat {
         return medlemstilstand;
     }
 
-    public int rabatBillet() {
+    public void rabatBillet() {
         if (medlemstilstand) {
             this.billetpris = medlemspris;
-            System.out.println("Din billetpris" + medlemspris);
+            System.out.println("Din billetpris " + medlemspris);
         } else {
             System.out.println("Du betaler normalpris");
         }
-        return 0;
     }
     
     public void tilføjMedlem() {
@@ -216,7 +217,7 @@ public class Billetautomat {
         medlemsKode.add(input.nextLine());
     }
     
-    void medlemLogin(String medlemskode) {
+    public void medlemLogin(String medlemskode) {
         if (medlemsKode.contains(medlemskode)) {
             medlemstilstand = true;
             System.out.println("Du er logget ind som medlem!");
