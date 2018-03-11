@@ -8,7 +8,7 @@ public class BenytBilletautomat {
 
     public static void main(String[] arg) {
         Billetautomat automat = new Billetautomat();
-        Medlem medlem = new Medlem();
+        //Medlem medlem = new Medlem();
         java.util.Scanner tastatur = new java.util.Scanner(System.in);
 
         System.out.println("BenytBilletautomat version 3");
@@ -23,8 +23,9 @@ public class BenytBilletautomat {
             System.out.println("Tast 2 for at udskrive din billet");
             System.out.println("Tast 3 for at få returpengene");
             System.out.println("Tast 4 for at logge ind som medlem");
+            System.out.println("Tast 5 for at oprette medlemsskab");
             if (automat.erMedlem()) {
-                System.out.println("Tast 5 for at købe rabatbillet");
+                System.out.println("Tast 6 for at købe rabatbillet");
                 System.out.println();
                 System.out.println("Tast 20 for at logge ud som medlem");
             }
@@ -58,12 +59,16 @@ public class BenytBilletautomat {
                 }
                 case 4: {
                     System.out.print("Skriv medlemskode: ");
-                    String kode = tastatur.next();
-                    automat.medlemLogin(kode);
+                    String medlemskode = tastatur.next();
+                    automat.medlemLogin(medlemskode);
 
                     break;
                 }
                 case 5: {
+                    automat.tilføjMedlem();
+                    break;
+                }
+                case 6: {
                     automat.rabatBillet();
                     break;
                 }
@@ -107,6 +112,8 @@ public class BenytBilletautomat {
                         System.out.println("Log printet til fil");
                     }
                     break;
+                
+             
                 }
                 default: {
                     System.out.println("Ugyldigt valg, prøv igen");

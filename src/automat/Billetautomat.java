@@ -179,60 +179,59 @@ public class Billetautomat {
         printWriter.close();
 
     }
-    public boolean erMedlem(){
+
+    public boolean erMedlem() {
         return medlemstilstand;
     }
-    
-    public int rabatBillet(){
-        if (medlemstilstand){
+
+    public int rabatBillet() {
+        if (medlemstilstand) {
             this.billetpris = medlemspris;
-            System.out.println("Din billetpris"+ medlemspris);
+            System.out.println("Din billetpris" + medlemspris);
         } else {
             System.out.println("Du betaler normalpris");
         }
         return 0;
     }
-    
+
     void medlemLogin(String medlemskode) {
-        if ("456".equals(medlemskode)) {
+        if ("".equals(medlemskode)) {
             medlemstilstand = true;
             System.out.println("Du er logget ind som medlem!");
         } else {
             medlemstilstand = false;
-            
+
             System.out.println("Ikke medlem!");
         }
     }
-    
-    public void Medlem()
 
-    {
-
-        //Scanner input = new Scanner(System.in);
+    public void tilføjMedlem() {
+        Scanner input = new Scanner(System.in);
 
         ArrayList<String> medlemsNavn = new ArrayList<>();
         ArrayList<String> medlemsNummer = new ArrayList<>();
         ArrayList<String> mail = new ArrayList<>();
-        ArrayList<String> telefon = new ArrayList<>();
-        ArrayList<String> kode = new ArrayList<>();
+        ArrayList<Integer> telefon = new ArrayList<>();
+        ArrayList<String> medlemskode = new ArrayList<>();
 
-        
-        }
-    /*
-    public static void FTP(String[] a) throws Exception
-	{
-		FtpForbindelse f = new FtpForbindelse();
-		// bemærk - vær altid MEGET FORSIGTIG med at angive adgangskoder i en fil!!
-		f.forbind("192.168.0.105","test","Hejmeddig");
+        System.out.println("Indtast dit fornavn: ");
+        medlemsNavn.add(input.nextLine());
+        System.out.println("Indtast telefonnummer: ");
+        medlemsNummer.add(input.nextLine());
+        System.out.println("Indtast din kode");
+        medlemskode.add(input.nextLine());
 
-		f.sendKommando("HELP");    // få liste over kommandoer som tjenesten kender
-		f.modtagTekst("LIST");     // få liste over filer på værten
-
-		String indhold = "Indhold af en lille fil med navnet:\nfil.txt\n";
-		f.sendTekst("STOR hej.txt", indhold);       // gem en tekstfil på værten
-
-		indhold = f.modtagTekst("RETR fil.txt");    // hent filen igen 
-		System.out.println("Fil hentet med indholdet: "+indhold);
-	}
-*/
     }
+
+    public void FTP(String[] a) throws Exception {
+        FtpForbindelse f = new FtpForbindelse();
+        // bemærk - vær altid MEGET FORSIGTIG med at angive adgangskoder i en fil!!
+        f.forbind("192.168.0.105", "test", "Hejmeddig");
+
+        String indhold = "Indhold af en lille fil med navnet:\nfil.txt\n";
+        f.sendTekst("STOR log.txt", indhold);
+
+        indhold = f.modtagTekst("RETR fil.txt");
+        System.out.println("Fil hentet med indholdet: " + indhold);
+    }
+}

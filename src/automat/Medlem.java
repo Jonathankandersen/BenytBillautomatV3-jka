@@ -4,24 +4,28 @@ package automat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class Medlem {
 
-Scanner input = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
 
-ArrayList<String> medlemsNavn = new ArrayList<>();
-ArrayList<String> medlemsNummer = new ArrayList<>();
-ArrayList<String> mail = new ArrayList<>();
-ArrayList<String> telefon = new ArrayList<>(); 
-ArrayList<String> kode = new ArrayList<>();
+    ArrayList<String> medlemsNavn = new ArrayList<>();
+    ArrayList<String> medlemsNummer = new ArrayList<>();
+    ArrayList<String> mail = new ArrayList<>();
+    ArrayList<String> telefon = new ArrayList<>();
+    ArrayList<String> kode = new ArrayList<>();
 
-public void tilføjMedlem() {
-    System.out.println("Indtast dit fornavn");
-    
-    
-}
+    /**
+     *
+     */
+    public void tilføjMedlem() {
+       while (true) {
+        System.out.println("Indtast dit fornavn");
+        medlemsNavn.add(input.nextLine());
+        
 
-    
+    }
+    }
+/*
     private boolean medlemTilstand;
 
     void medlemLogin(String adgangskode) {
@@ -34,9 +38,7 @@ public void tilføjMedlem() {
             System.out.println("Montørtilstand deaktiveret");
         }
     }
-    
-    
-    
+/*
     /*
     public int getTotal() {
         if (montørtilstand) {
@@ -47,5 +49,5 @@ public void tilføjMedlem() {
         }
         
     }
-*/
+     */
 }
