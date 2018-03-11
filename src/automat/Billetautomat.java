@@ -2,6 +2,9 @@
 // Hej med dig 
 package automat;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDateTime;
 
 /**
@@ -162,4 +165,13 @@ public class Billetautomat {
         System.out.println("Total omsætning: " + getTotal());
     }
 
+    public void writerString()
+            throws IOException {
+        FileWriter fileWriter = new FileWriter("file.txt");
+        PrintWriter printWriter = new PrintWriter(fileWriter);
+        printWriter.println("Antal solgte billetter: " + getAntalBilletterSolgt()+ " Styk");
+        printWriter.println("Total: "+getTotal() +"Kroner");
+        printWriter.close();
+
+    }
 }
