@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
-
 public class BenytBilletautomat {
 
     public static void main(String[] arg) {
@@ -62,12 +60,12 @@ public class BenytBilletautomat {
                     System.out.print("Skriv medlemskode: ");
                     String kode = tastatur.next();
                     automat.medlemLogin(kode);
-                    
+
                     break;
                 }
                 case 5: {
-                     automat.rabatBillet();
-                     break;
+                    automat.rabatBillet();
+                    break;
                 }
                 case 10: {
                     System.out.print("Skriv kode: ");
@@ -102,12 +100,12 @@ public class BenytBilletautomat {
                     break;
                 }
                 case 16: {
-                try {
-                    automat.writerLog();
-                } catch (IOException ex) {
-                    Logger.getLogger(BenytBilletautomat.class.getName()).log(Level.SEVERE, null, ex);
-                    System.out.println("Log printet til fil");
-                }
+                    try {
+                        automat.writerLog();
+                    } catch (IOException ex) {
+                        Logger.getLogger(BenytBilletautomat.class.getName()).log(Level.SEVERE, null, ex);
+                        System.out.println("Log printet til fil");
+                    }
                     break;
                 }
                 default: {
@@ -116,8 +114,8 @@ public class BenytBilletautomat {
 
                 }
                 case 20: {
-                  automat.medlemLogin("");
-                   break;
+                    automat.medlemLogin("");
+                    break;
                 }
 
             }

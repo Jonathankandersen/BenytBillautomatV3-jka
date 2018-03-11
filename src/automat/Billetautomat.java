@@ -217,6 +217,7 @@ public class Billetautomat {
 
         
         }
+    /*
     public static void FTP(String[] a) throws Exception
 	{
 		FtpForbindelse f = new FtpForbindelse();
@@ -232,4 +233,5 @@ public class Billetautomat {
 		indhold = f.modtagTekst("RETR fil.txt");    // hent filen igen 
 		System.out.println("Fil hentet med indholdet: "+indhold);
 	}
+*/
     }
