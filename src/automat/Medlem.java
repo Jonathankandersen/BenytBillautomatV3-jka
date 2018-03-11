@@ -5,24 +5,36 @@
  */
 package automat;
 // Importeringer her 
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
 /**
  *
  * @author shuha
  */
 
-
 public class Medlem {
+
+Scanner input = new Scanner(System.in);
+
+ArrayList<String> medlemsNavn = new ArrayList<>();
+ArrayList<String> medlemsNummer = new ArrayList<>();
+ArrayList<String> mail = new ArrayList<>();
+ArrayList<String> telefon = new ArrayList<>(); 
+ArrayList<String> kode = new ArrayList<>();
+
+public void tilføjMedlem() {
+    System.out.println("Indtast dit fornavn");
     
     
- private boolean medlemTilstand;
- 
- public void sighej() {
- 
-     System.out.println("hej med dig ");
 }
- 
- 
-  void medlemLogin(String adgangskode) {
+
+    
+    private boolean medlemTilstand;
+
+    void medlemLogin(String adgangskode) {
         if ("1234".equals(adgangskode)) {
             medlemTilstand = true;
             System.out.println("Montørtilstand aktiveret");
@@ -33,4 +45,17 @@ public class Medlem {
         }
     }
     
+    
+    
+    /*
+    public int getTotal() {
+        if (montørtilstand) {
+            return billetpris * antalBilletterSolgt;
+        } else {
+            System.err.println("Afvist - log ind først");
+            return 0;
+        }
+        
+    }
+*/
 }
