@@ -3,7 +3,7 @@ package automat;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import java.io.*;
 
 public class Medlem {
 
@@ -15,11 +15,9 @@ ArrayList<String> mail = new ArrayList<>();
 ArrayList<String> telefon = new ArrayList<>(); 
 ArrayList<String> kode = new ArrayList<>();
 
-public void tilføjMedlem() {
-    System.out.println("Indtast dit fornavn");
-    
-    
-}
+public void tilføjMedlem(String navn, String nummer, String mail, String telefon, String kode) {
+        
+    }
 
     
     private boolean medlemTilstand;
