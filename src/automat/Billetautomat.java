@@ -21,6 +21,14 @@ public class Billetautomat {
     private boolean montørtilstand;
     private boolean medlemstilstand;
 
+    Scanner input = new Scanner(System.in);
+
+    ArrayList<String> medlemsNavn = new ArrayList<>();
+    ArrayList<String> medlemsNummer = new ArrayList<>();
+    ArrayList<String> mail = new ArrayList<>();
+    ArrayList<Integer> telefon = new ArrayList<>();
+    ArrayList<String> medlemsKode = new ArrayList<>();
+    
     /**
      * Opret en billetautomat der sælger billetter til 10 kr.
      */
@@ -29,7 +37,6 @@ public class Billetautomat {
         medlemspris = 5;
         balance = 0;
         antalBilletterSolgt = 0;
-        int medlemskode = 0;
     }
 
     /**
@@ -194,9 +201,23 @@ public class Billetautomat {
         }
         return 0;
     }
+    
+    public void tilføjMedlem() {
 
+        System.out.println("Indtast dit fornavn: ");
+        medlemsNavn.add(input.nextLine());
+        System.out.println("Indtast telefonnummer: ");
+        medlemsNummer.add(input.nextLine());
+        System.out.println("Indtast mail");
+        mail.add(input.nextLine());
+        System.out.println("Indtast telefon");
+        telefon.add(input.nextInt());
+        System.out.println("Indtast din kode");
+        medlemsKode.add(input.nextLine());
+    }
+    
     void medlemLogin(String medlemskode) {
-        if ("".equals(medlemskode)) {
+        if (medlemsKode.contains(medlemskode)) {
             medlemstilstand = true;
             System.out.println("Du er logget ind som medlem!");
         } else {
@@ -205,25 +226,8 @@ public class Billetautomat {
             System.out.println("Ikke medlem!");
         }
     }
-
-    public void tilføjMedlem() {
-        Scanner input = new Scanner(System.in);
-
-        ArrayList<String> medlemsNavn = new ArrayList<>();
-        ArrayList<String> medlemsNummer = new ArrayList<>();
-        ArrayList<String> mail = new ArrayList<>();
-        ArrayList<Integer> telefon = new ArrayList<>();
-        ArrayList<String> medlemskode = new ArrayList<>();
-
-        System.out.println("Indtast dit fornavn: ");
-        medlemsNavn.add(input.nextLine());
-        System.out.println("Indtast telefonnummer: ");
-        medlemsNummer.add(input.nextLine());
-        System.out.println("Indtast din kode");
-        medlemskode.add(input.nextLine());
-
-    }
-
+    
+    
     public void FTP(String[] a) throws Exception {
         FtpForbindelse f = new FtpForbindelse();
         // bemærk - vær altid MEGET FORSIGTIG med at angive adgangskoder i en fil!!
