@@ -6,6 +6,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Model af en simpel billetautomat til enkeltbilletter med én fast pris.
@@ -15,13 +17,16 @@ public class Billetautomat {
     private int billetpris;    // Prisen for én billet.
     private int balance; // Hvor mange penge kunden p.t. har puttet i automaten
     private int antalBilletterSolgt; // Antal billetter automaten i alt har solgt
+    private int medlemspris;
     private boolean montørtilstand;
+    private boolean medlemstilstand;
 
     /**
      * Opret en billetautomat der sælger billetter til 10 kr.
      */
     public Billetautomat() {
         billetpris = 10;
+        medlemspris = 5;
         balance = 0;
         antalBilletterSolgt = 0;
     }
@@ -174,4 +179,57 @@ public class Billetautomat {
         printWriter.close();
 
     }
-}
+    public boolean erMedlem(){
+        return medlemstilstand;
+    }
+    
+    public int rabatBillet(){
+        if (medlemstilstand){
+            System.out.println("Din billetpris"+ medlemspris);
+            billetpris = medlemspris;
+        } else {
+            System.out.println("Du betaler normalpris");
+        }
+        return 0;
+    }
+    
+    void medlemLogin(String medlemskode) {
+        if ("456".equals(medlemskode)) {
+            medlemstilstand = true;
+            System.out.println("Du er logget ind som medlem!");
+        } else {
+            montørtilstand = false;
+            System.out.println("Ikke medlem!");
+        }
+    }
+    
+    public void Medlem()
+
+    {
+
+        Scanner input = new Scanner(System.in);
+
+        ArrayList<String> medlemsNavn = new ArrayList<>();
+        ArrayList<String> medlemsNummer = new ArrayList<>();
+        ArrayList<String> mail = new ArrayList<>();
+        ArrayList<String> telefon = new ArrayList<>();
+        ArrayList<String> kode = new ArrayList<>();
+
+        
+        }
+    public static void FTP(String[] a) throws Exception
+	{
+		FtpForbindelse f = new FtpForbindelse();
+		// bemærk - vær altid MEGET FORSIGTIG med at angive adgangskoder i en fil!!
+		f.forbind("192.168.0.105","test","Hejmeddig");
+
+		f.sendKommando("HELP");    // få liste over kommandoer som tjenesten kender
+		f.modtagTekst("LIST");     // få liste over filer på værten
+
+		String indhold = "Indhold af en lille fil med navnet:\nfil.txt\n";
+		f.sendTekst("STOR hej.txt", indhold);       // gem en tekstfil på værten
+
+		indhold = f.modtagTekst("RETR fil.txt");    // hent filen igen 
+		System.out.println("Fil hentet med indholdet: "+indhold);
+	}
+    }

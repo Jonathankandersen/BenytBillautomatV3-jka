@@ -24,7 +24,12 @@ public class BenytBilletautomat {
             System.out.println("Tast 1 for at indbetale penge");
             System.out.println("Tast 2 for at udskrive din billet");
             System.out.println("Tast 3 for at få returpengene");
-            System.out.println("Tast 4 for medlemskab");
+            System.out.println("Tast 4 for at logge ind som medlem");
+            if (automat.erMedlem()) {
+                System.out.println("Tast 5 for at købe rabatbillet");
+                System.out.println();
+                System.out.println("Tast 20 for at logge ud som medlem");
+            }
             System.out.println();
             System.out.println("Tast 10 for at logge ind som montør");
             if (automat.erMontør()) {
@@ -54,9 +59,15 @@ public class BenytBilletautomat {
                     break;
                 }
                 case 4: {
-                    System.out.println("Tast 1 for at logge ind");
-                    System.out.println("Tast 2 for at oprette medlemskab");
-                    System.out.println("Tast 3 for at redigere medlemskab");
+                    System.out.print("Skriv medlemskode: ");
+                    String kode = tastatur.next();
+                    automat.medlemLogin(kode);
+                    
+                    break;
+                }
+                case 5: {
+                     automat.rabatBillet();
+                     break;
                 }
                 case 10: {
                     System.out.print("Skriv kode: ");
@@ -103,6 +114,10 @@ public class BenytBilletautomat {
                     System.out.println("Ugyldigt valg, prøv igen");
                     break;
 
+                }
+                case 20: {
+                  automat.medlemLogin("");
+                   break;
                 }
 
             }
