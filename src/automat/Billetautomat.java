@@ -17,9 +17,18 @@ public class Billetautomat {
     private int billetpris;    // Prisen for én billet.
     private int balance; // Hvor mange penge kunden p.t. har puttet i automaten
     private int antalBilletterSolgt; // Antal billetter automaten i alt har solgt
-    private int medlemspris;
+    private int medlemspris;        // Prisen for én billet til medlemmer
     private boolean montørtilstand;
     private boolean medlemstilstand;
+    private int medlemsType;
+
+    Scanner input = new Scanner(System.in);
+
+    ArrayList<String> MedlemsNavn = new ArrayList<>();
+    ArrayList<String> Mail = new ArrayList<>();
+    ArrayList<Integer> Telefon = new ArrayList<>();
+    ArrayList<String> MedlemsKode = new ArrayList<>();
+    ArrayList<Integer> MedlemsType = new ArrayList<>();
 
     /**
      * Opret en billetautomat der sælger billetter til 10 kr.
@@ -29,7 +38,6 @@ public class Billetautomat {
         medlemspris = 5;
         balance = 0;
         antalBilletterSolgt = 0;
-        int medlemskode = 0;
     }
 
     /**
@@ -72,7 +80,7 @@ public class Billetautomat {
      * Udskriv en billet. Opdater total og nedskriv balancen med billetprisen
      */
     public void udskrivBillet() {
-        if (balance <= 9) {
+        if (balance < billetpris) {
             System.err.println("Du mangler at indbetale nogle penge");
         } else if (balance >= 10) {
             System.out.println("##########B##T#########");
@@ -92,7 +100,7 @@ public class Billetautomat {
         }
     }
 
-    // Retunere værdi kupon med penge til gode 
+    // Returnerer værdikupon med penge til gode 
     public int returpenge() {
         int returbeløb = balance;
         balance = 0;
@@ -111,6 +119,7 @@ public class Billetautomat {
         return returbeløb;
     }
 
+    // Login til montøren af billetautomaten
     void montørLogin(String adgangskode) {
         if ("1234".equals(adgangskode)) {
             montørtilstand = true;
@@ -144,6 +153,7 @@ public class Billetautomat {
         this.billetpris = billetpris;
     }
 
+    // Montøren nulstiller billetautomaten
     public void nulstil() {
         if (montørtilstand) {
             antalBilletterSolgt = 0;
@@ -185,43 +195,58 @@ public class Billetautomat {
         return medlemstilstand;
     }
 
-    public int rabatBillet() {
+    public void rabatBillet() {
         if (medlemstilstand) {
+            switch (medlemsType) {
+                case 1:
+                    medlemspris = 5;
+                    break;
+                case 2:
+                    medlemspris = 10;
+                    break;
+                case 3:
+                    medlemspris = 15;
+                    break;
+                case 4:
+                    medlemspris = 20;
+                    break;
+            }
             this.billetpris = medlemspris;
-            System.out.println("Din billetpris" + medlemspris);
+            System.out.println("Din billetpris " + medlemspris);
         } else {
             System.out.println("Du betaler normalpris");
         }
-        return 0;
     }
 
-    void medlemLogin(String medlemskode) {
-        if ("".equals(medlemskode)) {
+    public void tilføjMedlem() {
+
+        System.out.println("Indtast dit fornavn: ");
+        MedlemsNavn.add(input.nextLine());
+        System.out.println("Indtast mail");
+        Mail.add(input.nextLine());
+        System.out.println("Indtast telefon");
+        Telefon.add(input.nextInt());
+        System.out.println("Indtast din kode");
+        MedlemsKode.add(input.nextLine());
+        System.out.println("Indtast medlemsType");
+        System.out.println("Tast 1 for voksen");
+        System.out.println("Tast 2 for barn");
+        System.out.println("Tast 3 for hest");
+        System.out.println("Tast 4 for cykel");
+        MedlemsType.add(input.nextInt());
+    }
+
+    public void medlemLogin(String medlemskode) {
+        if (MedlemsKode.contains(medlemskode)) {
             medlemstilstand = true;
             System.out.println("Du er logget ind som medlem!");
+            int index = MedlemsKode.indexOf(medlemskode);
+            medlemsType = MedlemsType.get(index);
         } else {
             medlemstilstand = false;
 
             System.out.println("Ikke medlem!");
         }
-    }
-
-    public void tilføjMedlem() {
-        Scanner input = new Scanner(System.in);
-
-        ArrayList<String> medlemsNavn = new ArrayList<>();
-        ArrayList<String> medlemsNummer = new ArrayList<>();
-        ArrayList<String> mail = new ArrayList<>();
-        ArrayList<Integer> telefon = new ArrayList<>();
-        ArrayList<String> medlemskode = new ArrayList<>();
-
-        System.out.println("Indtast dit fornavn: ");
-        medlemsNavn.add(input.nextLine());
-        System.out.println("Indtast telefonnummer: ");
-        medlemsNummer.add(input.nextLine());
-        System.out.println("Indtast din kode");
-        medlemskode.add(input.nextLine());
-
     }
 
     public void FTP(String[] a) throws Exception {

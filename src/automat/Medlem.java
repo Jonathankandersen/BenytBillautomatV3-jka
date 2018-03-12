@@ -11,23 +11,27 @@ public class Medlem {
     ArrayList<String> medlemsNavn = new ArrayList<>();
     ArrayList<String> medlemsNummer = new ArrayList<>();
     ArrayList<String> mail = new ArrayList<>();
-    ArrayList<String> telefon = new ArrayList<>();
-    ArrayList<String> kode = new ArrayList<>();
+    ArrayList<Integer> telefon = new ArrayList<>();
+    ArrayList<String> medlemsKode = new ArrayList<>();
 
-    /**
-     *
-     */
     public void tilføjMedlem() {
-        while (true) {
-            System.out.println("Indtast dit fornavn");
-            medlemsNavn.add(input.nextLine());
-        }
+
+        System.out.println("Indtast dit fornavn: ");
+        medlemsNavn.add(input.nextLine());
+        System.out.println("Indtast telefonnummer: ");
+        medlemsNummer.add(input.nextLine());
+        System.out.println("Indtast mail");
+        mail.add(input.nextLine());
+        System.out.println("Indtast telefon");
+        telefon.add(input.nextInt());
+        System.out.println("Indtast din kode");
+        medlemsKode.add(input.nextLine());
     }
-    /*
+
     private boolean medlemTilstand;
 
-    void medlemLogin(String adgangskode) {
-        if ("1234".equals(adgangskode)) {
+    public void medlemLogin(String adgangskode) {
+        if (medlemsKode.contains(adgangskode)) {
             medlemTilstand = true;
             System.out.println("Montørtilstand aktiveret");
             System.out.println("Du kan nu angive billetpris");
@@ -36,16 +40,4 @@ public class Medlem {
             System.out.println("Montørtilstand deaktiveret");
         }
     }
-/*
-    /*
-    public int getTotal() {
-        if (montørtilstand) {
-            return billetpris * antalBilletterSolgt;
-        } else {
-            System.err.println("Afvist - log ind først");
-            return 0;
-        }
-        
-    }
-     */
 }
