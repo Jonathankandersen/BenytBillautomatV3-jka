@@ -21,6 +21,11 @@ public class Billetautomat {
     private boolean montørtilstand;
     private boolean medlemstilstand;
     private int medlemsType;
+    private int voksen;
+    private int barn;
+    private int hest;
+    private int cykel;
+    
 
     Scanner input = new Scanner(System.in);
 
@@ -149,8 +154,12 @@ public class Billetautomat {
         }
     }
 
-    public void setBilletpris(int billetpris) {
+    public void setBilletpris(int billetpris, int voksenpris, int barnepris, int hestpris, int cykelpris) {
         this.billetpris = billetpris;
+        this.voksen = voksenpris;
+        this.barn = barnepris;
+        this.hest = hestpris;
+        this.cykel = cykelpris;
     }
 
     // Montøren nulstiller billetautomaten
@@ -199,16 +208,16 @@ public class Billetautomat {
         if (medlemstilstand) {
             switch (medlemsType) {
                 case 1:
-                    medlemspris = 5;
+                    medlemspris = voksen;
                     break;
                 case 2:
-                    medlemspris = 10;
+                    medlemspris = barn;
                     break;
                 case 3:
-                    medlemspris = 15;
+                    medlemspris = hest;
                     break;
                 case 4:
-                    medlemspris = 20;
+                    medlemspris = cykel;
                     break;
             }
             this.billetpris = medlemspris;

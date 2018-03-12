@@ -89,9 +89,18 @@ public class BenytBilletautomat {
                     break;
                 }
                 case 13: {
-                    System.out.print("Skriv beløb: ");
+                    System.out.print("Skriv priser på diverse billetter: ");
+                    System.out.println("Først normalpris");
                     int beløb = tastatur.nextInt();
-                    automat.setBilletpris(beløb);
+                    System.out.println("Derefter voksen medlemspris");
+                    int voksenmedlem = tastatur.nextInt();
+                    System.out.println("Herefter barn medlemspris");
+                    int barnemedlem = tastatur.nextInt();
+                    System.out.println("Herfeter hest medlemspris");
+                    int hestemedlem = tastatur.nextInt();
+                    System.out.println("Og til sidst cykelpris");
+                    int cykelmedlem = tastatur.nextInt();
+                    automat.setBilletpris(beløb, voksenmedlem, barnemedlem, hestemedlem, cykelmedlem);
                     break;
                 }
                 case 14: {
@@ -121,7 +130,7 @@ public class BenytBilletautomat {
                 }
                 case 20: {
                     automat.medlemLogin("");
-                    automat.setBilletpris(10);
+                    automat.setBilletpris(10, 7, 5, 10, 15);
                     break;
                 }
 
