@@ -20,15 +20,16 @@ public class Billetautomat {
     private int medlemspris;        // Prisen for én billet til medlemmer
     private boolean montørtilstand;
     private boolean medlemstilstand;
+    private int medlemsType;
 
     Scanner input = new Scanner(System.in);
 
-    ArrayList<String> medlemsNavn = new ArrayList<>();
-    ArrayList<String> medlemsNummer = new ArrayList<>();
-    ArrayList<String> mail = new ArrayList<>();
-    ArrayList<Integer> telefon = new ArrayList<>();
-    ArrayList<String> medlemsKode = new ArrayList<>();
-    
+    ArrayList<String> MedlemsNavn = new ArrayList<>();
+    ArrayList<String> Mail = new ArrayList<>();
+    ArrayList<Integer> Telefon = new ArrayList<>();
+    ArrayList<String> MedlemsKode = new ArrayList<>();
+    ArrayList<Integer> MedlemsType = new ArrayList<>();
+
     /**
      * Opret en billetautomat der sælger billetter til 10 kr.
      */
@@ -196,39 +197,58 @@ public class Billetautomat {
 
     public void rabatBillet() {
         if (medlemstilstand) {
+            switch (medlemsType) {
+                case 1:
+                    medlemspris = 5;
+                    break;
+                case 2:
+                    medlemspris = 10;
+                    break;
+                case 3:
+                    medlemspris = 15;
+                    break;
+                case 4:
+                    medlemspris = 20;
+                    break;
+            }
             this.billetpris = medlemspris;
             System.out.println("Din billetpris " + medlemspris);
         } else {
             System.out.println("Du betaler normalpris");
         }
     }
-    
+
     public void tilføjMedlem() {
 
         System.out.println("Indtast dit fornavn: ");
-        medlemsNavn.add(input.nextLine());
-        System.out.println("Indtast telefonnummer: ");
-        medlemsNummer.add(input.nextLine());
+        MedlemsNavn.add(input.nextLine());
         System.out.println("Indtast mail");
-        mail.add(input.nextLine());
+        Mail.add(input.nextLine());
         System.out.println("Indtast telefon");
-        telefon.add(input.nextInt());
+        Telefon.add(input.nextInt());
         System.out.println("Indtast din kode");
-        medlemsKode.add(input.nextLine());
+        MedlemsKode.add(input.nextLine());
+        System.out.println("Indtast medlemsType");
+        System.out.println("Tast 1 for voksen");
+        System.out.println("Tast 2 for barn");
+        System.out.println("Tast 3 for hest");
+        System.out.println("Tast 4 for cykel");
+        MedlemsType.add(input.nextInt());
     }
-    
+
     public void medlemLogin(String medlemskode) {
-        if (medlemsKode.contains(medlemskode)) {
+        if (MedlemsKode.contains(medlemskode)) {
             medlemstilstand = true;
             System.out.println("Du er logget ind som medlem!");
+            int index = MedlemsKode.indexOf(medlemskode);
+            medlemsType = MedlemsType.get(index);
         } else {
             medlemstilstand = false;
 
             System.out.println("Ikke medlem!");
         }
     }
-    
-    
+
     public void FTP(String[] a) throws Exception {
         FtpForbindelse f = new FtpForbindelse();
         // bemærk - vær altid MEGET FORSIGTIG med at angive adgangskoder i en fil!!
