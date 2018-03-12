@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
-        <file>
-            <url>src/automat/BenytBilletautomat.java</url>
-            <bookmark id="1">
-                <name/>
-                <line>8</line>
-                <key/>
-            </bookmark>
-        </file>
-    </editor-bookmarks>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group name="prog1">
             <file>file:/home/j/Drev/02313/02315%20TestOgVersionering/BenytBillautomatV3/src/automat/TjekBilletautomat.java</file>
         </group>
         <group/>
+=======
+        <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/shuha/OneDrive/Skrivebord/Kurser/2.Semester/Objektorienter%20Programmering/Opgaver/Opgaver%20Uge%204/Billetautomat2/BenytBillautomatV3-jka/src/automat/FtpForbindelse.java</file>
+            <file>file:/C:/Users/shuha/OneDrive/Skrivebord/Kurser/2.Semester/Objektorienter%20Programmering/Opgaver/Opgaver%20Uge%204/Billetautomat2/BenytBillautomatV3-jka/src/automat/Billetautomat.java</file>
+            <file>file:/C:/Users/shuha/OneDrive/Skrivebord/Kurser/2.Semester/Objektorienter%20Programmering/Opgaver/Opgaver%20Uge%204/Billetautomat2/BenytBillautomatV3-jka/src/automat/TjekBilletautomat.java</file>
+            <file>file:/C:/Users/shuha/OneDrive/Skrivebord/Kurser/2.Semester/Objektorienter%20Programmering/Opgaver/Opgaver%20Uge%204/Billetautomat2/BenytBillautomatV3-jka/src/automat/BenytBilletautomat.java</file>
+=======
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/BenytBillautomatV3-jka/BenytBillautomatV3-master/src/automat/BenytBilletautomat.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/BenytBillautomatV3-jka/BenytBillautomatV3-master/src/automat/Medlem.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/BenytBillautomatV3-jka/BenytBillautomatV3-master/src/automat/Billetautomat.java</file>
+>>>>>>> 5aab79a7dad2fb07c0e2127be886fedc2d4ed816
+        </group>
+>>>>>>> 74a251bbfd8a3b5d84531a138717e6929dcd42e7
     </open-files>
 </project-private>
