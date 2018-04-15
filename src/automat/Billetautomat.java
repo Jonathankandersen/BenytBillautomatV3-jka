@@ -1,5 +1,4 @@
 //baseline
-// Hej med dig 
 package automat;
 
 import java.io.FileWriter;
@@ -208,6 +207,7 @@ public class Billetautomat {
         if (medlemstilstand) {
             switch (medlemsType) {
                 case 1:
+<<<<<<< HEAD
                     medlemspris = voksen;
                     break;
                 case 2:
@@ -218,6 +218,18 @@ public class Billetautomat {
                     break;
                 case 4:
                     medlemspris = cykel;
+=======
+                    billetpris = 5;
+                    break;
+                case 2:
+                    billetpris = 10;
+                    break;
+                case 3:
+                    billetpris = 15;
+                    break;
+                case 4:
+                    billetpris = 20;
+>>>>>>> 04c5eccf6f30aacbbf102a1048ae9842bcb5b557
                     break;
             }
             this.billetpris = medlemspris;
